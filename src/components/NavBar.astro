@@ -1,0 +1,33 @@
+---
+import NavLink from "./NavLink.astro";
+
+---
+<header>
+  <nav class="pt-2 fixed w-full h-20 z-10 font-mono pr-0 pl-5 sm:pl-0 lg:pr-10 transition duration-300 backdrop-filter backdrop-blur-lg bg-opacity-50" id="navbar">
+      <div class="max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="#Home" class="text-cyan-400 font-bold text-xl hover:animate-wiggle-more hover:animate-duration-[400ms]"><img src="public/vectorpaint.svg" width="50" height="30" alt="logo"/></a>
+          </div>
+          <div class="hidden md:block">
+            <ul class="flex justify-end text-[#8892B0] space-x-6">
+              <li class = "animate-fade-down animate-duration-300"><NavLink href='#About' title='About' number= '01'/></li>
+              <li class = "animate-fade-down animate-duration-500"><NavLink href='#Skills' title='Skills' number= '02'/></li>
+              <li class = "animate-fade-down animate-duration-700"><NavLink href='#Projects' title='Projects' number= '03'/></li>
+              <li class = "animate-fade-down animate-duration-900"><NavLink href='#Experience' title='Experience' number= '04'/></li>
+              <li class = "animate-fade-down animate-duration-1200"><NavLink href='#Contact' title='Contact' number= '05'/></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<script>
+  function addNavbarShadow(): void {
+    const nav = document.getElementById("navbar");
+    nav?.classList.toggle("shadow-lg", window.scrollY > 0);
+  }
+  
+  window.addEventListener("scroll", addNavbarShadow);
+</script>

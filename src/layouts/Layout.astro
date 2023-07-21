@@ -1,0 +1,59 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color">
+		<link rel="icon" type="image/svg+xml" href="/vectorpaint.svg" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<script>document.documentElement.classList.add('js')</script>
+		<script src="https://unpkg.com/taos@1.0.3/dist/taos.js"></script>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		background: #0a192f;
+		scroll-behavior: smooth;
+		@apply font-sans
+		
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	
+	.text-color {
+		@apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-600
+	}
+	.line-color {
+		@apply border-[#8892B0]
+	}
+	#About p span{
+		@apply font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-600
+	}
+	#ambitionText {
+		max-width: 45ch;
+	}
+	#aboutMeText {
+		max-width: 55ch;
+	}
+	
+</style>
