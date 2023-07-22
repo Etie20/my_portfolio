@@ -1,0 +1,39 @@
+---
+import Card from "../Card.astro";
+const languages: string[] = ["Flutter", "Express", "MongoDB", "Render", "Cloudinary"];
+---
+<section id="Projects" class="delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset ="20">
+    <div class="flex flex-col items-center pt-40 space-y-3">
+        <div class="flex flex-row items-center space-x-4 mb-10">
+            <hr class="line-color w-36 sm:w-96">
+            <h1 class="text-[#CDC6F6] font-bold text-2xl"><span class="text-cyan-400">03.</span> Projects</h1>
+        </div>
+        <div>
+            <p class="text-color text-2xl font-bold flex flex-row justify-center">#GAUS MARKET</p>
+            <div class=" max-w-xl max-h-xl bg-[#0E2340] text-[#8892B0] p-10 mt-10">
+                <p>My application combines stock management, accounting, 
+                    and a marketplace for <span class="text-color">Cameroonian businesses</span>. It simplifies 
+                    operations and facilitates buying and selling <span class="text-color">between local</span> 
+                    <span class="text-color">businesses, leading to increased profitability</span>.</p>
+            </div>  
+            <div class="text-[#8892B0] mt-5 text- flex flex-wrap items-start max-w-xl gap-5">
+                <p>Flutter</p>
+                <p>Express</p>
+                <p>MongoDB</p>
+                <p>Render</p>
+                <p>Cloudinary</p>
+            </div>
+        </div>
+        <div class="pt-40 flex flex-col items-center">
+            <p class="text-xl sm:text-3xl font-bold text-[#CDC6F6]">Other Noteworthy Projects</p>
+            <div class="flex flex-row justify-center pt-5">
+                <p class="text-color">view the archive</p>
+            </div>
+            <ul class="flex flex-row flex-wrap gap-10 justify-center lg:justify-start pt-20">
+                <Card title="Cameroon Farm management web app" body="Building a web app to help cameroonian farm to manage their ressources" href="etie.com"/>
+                <Card title="Cameroon Farm management web app" body="Yes i'm there" href="etie.com"/>
+                <Card title="Cameroon Farm management web app" body="Yes i'm there" href="etie.com"/>
+            </ul>
+        </div>
+    </div>
+</section>

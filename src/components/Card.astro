@@ -8,15 +8,26 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
+<li class="link-card w-72">
+	
 	<a href={href}>
-		<h2>
+		<div class="flex justify-between">
+			<img class="my-2" src="/github.svg" width="30" height="30" alt="github"/>
+		</div>
+		<p class="text-[#CDC6F6] font-bold text-xl">
 			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
+		</p>
+		<p class="text-[#CDC6F6] font-medium pt-5">
 			{body}
 		</p>
+		<div class="flex flex-row flex-wrap gap-2 pt-5 font-semibold">
+			<p>Next.js</p>
+			<p>Tailwind css</p>
+			<p>tRPC</p>
+			<p>Prisma</p>
+			<p>Postgresql</p>
+			<p>Next.Auth</p>
+		</div>
 	</a>
 </li>
 <style>
@@ -24,7 +35,7 @@ const { href, title, body } = Astro.props;
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
-		background-color: white;
+		background-color: #8892B0;
 		background-image: none;
 		background-size: 400%;
 		border-radius: 0.6rem;
@@ -39,8 +50,8 @@ const { href, title, body } = Astro.props;
 		line-height: 1.4;
 		padding: 1rem 1.3rem;
 		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
+		color: #000;
+		background-color: #0E2340;
 		opacity: 0.8;
 	}
 	h2 {

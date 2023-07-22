@@ -18,12 +18,42 @@ import NavLink from "./NavLink.astro";
               <li class = "animate-fade-down animate-duration-1200"><NavLink href='#Contact' title='Contact' number= '05'/></li>
             </ul>
           </div>
+          <div class="block md:hidden pr-5">
+            <button id="menu" class="hover:animate-wiggle-more hover:animate-duration-[400ms]"><img id="img" src="/align-right.svg" width="40" height="40" alt="menu"/></button>
+            <div class="hidden" id="menuToogle">
+              <div class="bg-[#0E2340] bg-opacity-90 absolute right-0 top-20 w-96 h-96 p-10">
+                <ul class="flex flex-col text-[#8892B0] items-start text-5xl">
+                  <li class = "animate-fade-down animate-duration-300"><NavLink href='#About' title='About' number= '01'/></li>
+                  <li class = "animate-fade-down animate-duration-500"><NavLink href='#Skills' title='Skills' number= '02'/></li>
+                  <li class = "animate-fade-down animate-duration-700"><NavLink href='#Projects' title='Projects' number= '03'/></li>
+                  <li class = "animate-fade-down animate-duration-900"><NavLink href='#Experience' title='Experience' number= '04'/></li>
+                  <li class = "animate-fade-down animate-duration-1200"><NavLink href='#Contact' title='Contact' number= '05'/></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 </header>
 
 <script>
+  let isActive: boolean = false;
+  const menuBtn = document.querySelector("#menu");
+  const menuImg = document.querySelector("#img");
+  const menuToogle = document.querySelector("#menuToogle"); 
+
+  menuBtn?.addEventListener("click", () => {
+    if(!isActive) {
+      menuImg?.setAttribute("src", "/x.svg");
+      menuToogle?.setAttribute("class", "block");
+    } else {
+      menuImg?.setAttribute("src", "/align-right.svg");
+      menuToogle?.setAttribute("class", "hidden");
+    }
+    isActive = !isActive;
+  });
+
   function addNavbarShadow(): void {
     const nav = document.getElementById("navbar");
     nav?.classList.toggle("shadow-lg", window.scrollY > 0);
