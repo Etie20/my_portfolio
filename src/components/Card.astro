@@ -3,14 +3,15 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	languages: string[]
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, languages } = Astro.props;
 ---
 
 <li class="link-card w-72">
 	
-	<a href={href}>
+	<a href={href} target="_blank">
 		<div class="flex justify-between">
 			<img class="my-2" src="/github.svg" width="30" height="30" alt="github"/>
 		</div>
@@ -21,12 +22,10 @@ const { href, title, body } = Astro.props;
 			{body}
 		</p>
 		<div class="flex flex-row flex-wrap gap-2 pt-5 font-semibold">
-			<p>Next.js</p>
-			<p>Tailwind css</p>
-			<p>tRPC</p>
-			<p>Prisma</p>
-			<p>Postgresql</p>
-			<p>Next.Auth</p>
+			{languages.map((language, index)=>(
+				<p>{language}</p>
+			))
+			}
 		</div>
 	</a>
 </li>

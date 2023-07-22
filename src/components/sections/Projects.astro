@@ -1,6 +1,9 @@
 ---
 import Card from "../Card.astro";
-const languages: string[] = ["Flutter", "Express", "MongoDB", "Render", "Cloudinary"];
+const languages1: string[] = ["Next.js", "Tailwind css"];
+const languages2: string[] = ["Laravel", "Express", "mariaDB", "Javascript"];
+const languages3: string[] = ["Flutter", "Firebase"]
+
 ---
 <section id="Projects" class="delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset ="20">
     <div class="flex flex-col items-center pt-40 space-y-3">
@@ -30,9 +33,9 @@ const languages: string[] = ["Flutter", "Express", "MongoDB", "Render", "Cloudin
                 <p class="text-color">view the archive</p>
             </div>
             <ul class="flex flex-row flex-wrap gap-10 justify-center lg:justify-start pt-20">
-                <Card title="Cameroon Farm management web app" body="Building a web app to help cameroonian farm to manage their ressources" href="etie.com"/>
-                <Card title="Cameroon Farm management web app" body="Yes i'm there" href="etie.com"/>
-                <Card title="Cameroon Farm management web app" body="Yes i'm there" href="etie.com"/>
+                <Card title="CSC Website Optimization" body="Optimize chedjou sports consulting website, for improve ui/ux" href="https://github.com/Etie20/CSC" languages={languages1}/>
+                <Card title="BDE Project" body="Make a web app for ucac-icam BDE activites management" href="https://github.com/Etie20/Project-WEB" languages={languages2}/>
+                <Card title="Password management mobile app" body="I build this app to improve my flutter skills" href="#Projects" languages={languages3}/>
             </ul>
         </div>
     </div>
