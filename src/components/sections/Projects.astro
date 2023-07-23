@@ -2,8 +2,11 @@
 import Card from "../Card.astro";
 import Project from "../Project.astro";
 const languages1: string[] = ["Next.js", "Tailwind css"];
-const languages2: string[] = ["Laravel", "Express", "mariaDB", "Javascript"];
-const languages3: string[] = ["Flutter", "Firebase"]
+const languages2: string[] = ["Laravel", "Express", "mySql", "Javascript"];
+const languages3: string[] = ["Flutter", "BLoC"];
+const languages4: string[] = ["Flutter", "BLoC"];
+const languages5: string[] = ["Flutter"];
+
 
 ---
 <section id="Projects" class="delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset ="20">
@@ -29,11 +32,14 @@ const languages3: string[] = ["Flutter", "Firebase"]
             <div class="flex flex-row justify-center pt-5">
                 <p class="text-color">view the archive</p>
             </div>
-            <ul class="flex flex-row flex-wrap gap-10 justify-center lg:justify-start pt-20">
+            <ul class="flex flex-row flex-wrap gap-10 justify-center  pt-20">
                 <Card title="CSC Website Optimization" body="Optimize chedjou sports consulting website, for improve ui/ux" href="https://github.com/Etie20/CSC" languages={languages1}/>
                 <Card title="BDE Project" body="Make a web app for ucac-icam BDE activites management" href="https://github.com/Etie20/Project-WEB" languages={languages2}/>
-                <Card title="Password management mobile app" body="I build this app to improve my flutter skills" href="#Projects" languages={languages3}/>
+                <Card title="Timer App" body="I build this app to learn how work BLoC pattern" href="https://github.com/Etie20/mon_minuteur_bloc" languages={languages3}/>
+                <Card title="Meteo App" body="Try to integrate a weather api on a flutter app" href="https://github.com/Etie20/meteo_bloc" languages={languages4}/>
+                <Card title="Christian Quiz" body="A basic quiz mobile app to improve my flutter skills" href="https://github.com/Etie20/Christian_Quiz" languages={languages5}/>
             </ul>
+            <a href="https://github.com/Etie20"><button id="message" class="mt-20 animate-fade-up animate-duration-[4000ms] font-mono my-2 text-cyan-400 border-cyan-400 border-2 px-10 py-3 rounded-md transition duration-300 hover:border-[#CDC6F6] hover:text-[#0a192f] hover:bg-cyan-400">More on my github 😉</button></a>
         </div>
     </div>
 </section>
