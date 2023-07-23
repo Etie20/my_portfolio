@@ -21,7 +21,7 @@ const { href, title, body, languages } = Astro.props;
 		<p class="text-[#CDC6F6] font-medium pt-5">
 			{body}
 		</p>
-		<div class="flex flex-row flex-wrap gap-2 pt-5 font-semibold">
+		<div class="flex flex-row flex-wrap gap-2 pt-5 font-semibold font-mono">
 			{languages.map((language, index)=>(
 				<p>{language}</p>
 			))

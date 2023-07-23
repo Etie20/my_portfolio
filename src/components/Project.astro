@@ -1,0 +1,29 @@
+---
+interface Props {
+    name: string;
+    description: string;
+    languages: string[];
+    imagePath: string;
+}
+
+const { name, description, languages, imagePath } = Astro.props;
+
+---
+
+<div>
+    <p class="text-color text-2xl font-bold flex flex-row justify-center mt-10">#{name}</p>
+        <div class="flex flex-row flex-wrap gap-2 justify-center px-5 md:px-0">
+            <div>
+                <div class=" max-w-xl max-h-xl bg-[#0E2340] text-[#8892B0] p-10 mt-10 font-medium">
+                    <p>{description}</p>
+                </div>  
+                <div class="text-[#8892B0] mt-5 text- flex flex-wrap items-start max-w-xl gap-5 font-mono">
+                  {languages.map((lang, index) => (
+                    <p class="hover:text-cyan-400 hover:cursor-pointer">{lang}</p>
+                  ))}
+                </div>
+
+            </div>
+            <img src={imagePath} width="10" height="10" alt="gaus projects" class="mt-20 h-80 bg-gradient-to-r from-cyan-300 to-blue-600 w-[425px]">
+        </div>
+</div>

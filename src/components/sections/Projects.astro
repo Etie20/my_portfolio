@@ -1,5 +1,6 @@
 ---
 import Card from "../Card.astro";
+import Project from "../Project.astro";
 const languages1: string[] = ["Next.js", "Tailwind css"];
 const languages2: string[] = ["Laravel", "Express", "mariaDB", "Javascript"];
 const languages3: string[] = ["Flutter", "Firebase"]
@@ -11,22 +12,18 @@ const languages3: string[] = ["Flutter", "Firebase"]
             <hr class="line-color w-36 sm:w-96">
             <h1 class="text-[#CDC6F6] font-bold text-2xl"><span class="text-cyan-400">03.</span> Projects</h1>
         </div>
-        <div>
-            <p class="text-color text-2xl font-bold flex flex-row justify-center">#GAUS MARKET</p>
-            <div class=" max-w-xl max-h-xl bg-[#0E2340] text-[#8892B0] p-10 mt-10">
-                <p>My application combines stock management, accounting, 
-                    and a marketplace for <span class="text-color">Cameroonian businesses</span>. It simplifies 
-                    operations and facilitates buying and selling <span class="text-color">between local</span> 
-                    <span class="text-color">businesses, leading to increased profitability</span>.</p>
-            </div>  
-            <div class="text-[#8892B0] mt-5 text- flex flex-wrap items-start max-w-xl gap-5">
-                <p>Flutter</p>
-                <p>Express</p>
-                <p>MongoDB</p>
-                <p>Render</p>
-                <p>Cloudinary</p>
-            </div>
-        </div>
+        <Project 
+        name="GAUS MARKET" 
+        description="Gaus Market combines stock management, accounting, and a marketplace for Cameroonian businesses. It simplifies operations and facilitates buying and selling between local businesses, leading to increased profitability."
+        languages={["Flutter", "Express", "MongoDB", "Render", "Cloudinary"]}
+        imagePath="/gausProject.svg"
+        />
+        <Project 
+        name="HOGMASTER" 
+        description="HogMaster is a web app that helps Cameroonian pig farmers manage their farm operations, from pig health and nutrition to production and sales. With real-time tracking and analysis of data such as weight, growth, feed consumption, and disease, users can make informed decisions to improve their production and profitability."
+        languages={["Next.js", "tRPC", "Prisma", "Postgresql", "Docker"]}
+        imagePath="/cs.svg"
+        />
         <div class="pt-40 flex flex-col items-center">
             <p class="text-xl sm:text-3xl font-bold text-[#CDC6F6]">Other Noteworthy Projects</p>
             <div class="flex flex-row justify-center pt-5">
