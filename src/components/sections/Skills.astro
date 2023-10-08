@@ -1,6 +1,99 @@
 ---
 import Skill from "../Skill.astro";
 
+const LanguagesLinks = [
+    {
+        name: "Javascript",
+        imagePath: "/javascript.svg"
+    },
+    {
+        name: "Typescript",
+        imagePath: "/typescript.svg"
+    },
+    {
+        name: "Dart",
+        imagePath: "/dart.svg"
+    },
+    {
+        name: "Java",
+        imagePath: "/java-4.svg"
+    },
+] 
+
+const FrontendLinks = [
+    {
+        name: "Flutter",
+        imagePath: "/flutter.svg"
+    },
+    {
+        name: "React",
+        imagePath: "/react-2.svg"
+    },
+    {
+        name: "Next",
+        imagePath: "/next-js.svg"
+    },
+    {
+        name: "Astro",
+        imagePath: "/astro.svg"
+    },
+]
+
+const BackendLinks = [
+    {
+        name: "Express",
+        imagePath: "/express-109.svg"
+    },
+    {
+        name: "Springboot",
+        imagePath: "/spring-3.svg"
+    },
+    {
+        name: "tRPC",
+        imagePath: "/trpc.svg"
+    },
+]
+
+const DataBaseLinks = [
+{
+        name: "Postgresql",
+        imagePath: "/postgresql.svg"
+    },
+    {
+        name: "MongoDB",
+        imagePath: "/mongodb.svg"
+    },
+    {
+        name: "Redis",
+        imagePath: "/redis.svg"
+    },
+]
+
+const OthersLinks = [
+{
+        name: "Figma",
+        imagePath: "/figma.svg"
+    },
+    {
+        name: "Tailwind css",
+        imagePath: "/tailwind.svg"
+    },
+    {
+        name: "Vercel",
+        imagePath: "/favicon.ico"
+    },
+    {
+        name: "Turborepo",
+        imagePath: "/turborepo-seeklogo.com.svg"
+    },
+]
+
+const DevOpsLinks = [
+    {
+        name: "Docker",
+        imagePath: "/docker-3.svg"
+    },
+]
 ---
 
 <section class="pt-40 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" id="Skills">
@@ -8,10 +101,12 @@ import Skill from "../Skill.astro";
         <hr class="line-color w-52 sm:w-96">
         <h1 class="text-[#CDC6F6] font-bold text-2xl"><span class="text-cyan-400">02.</span> Skills</h1>
     </div>
-    <div class="pt-20 flex lg:flex-row items-baseline justify-center flex-wrap gap-16 lg:gap-32 px-5 lg:px-0">
-        <Skill title="Languages"/>
-        <Skill title="Frontend"/>
-        <Skill title="Backend"/>
-        <Skill title="Others"/>
+    <div class="pt-20 flex flex-wrap items-baseline sm:items-center justify-center gap-20 lg:gap-32 px-10 lg:px-10 ">
+        <Skill title="Languages" links={LanguagesLinks}/>
+        <Skill title="Frontend" links={FrontendLinks}/>
+        <Skill title="Backend" links={BackendLinks}/>
+        <Skill title="Database" links={DataBaseLinks}/>
+        <!-- <Skill title="DevOps" links={DevOpsLinks}/> -->
+        <Skill title="Others" links={OthersLinks}/>
     </div>
 </section>

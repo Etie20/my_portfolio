@@ -1,63 +1,24 @@
 ---
+interface LinkProps {
+    name: string,
+    imagePath: string,
+}
 interface Props {
     title: string;
+    links: LinkProps[];
 }
 
-const { title } = Astro.props;
+
+const { title, links} = Astro.props;
 ---
 
-<div>
-    {
-    (title === "Languages")
-    ?
-    <div class="animate-fade-up animate-duration-[2200ms]">
+<div class="animate-fade-up animate-duration-[2200ms]">
         <p class="text-[#CDC6F6] text-xl font-bold pb-5">{title}</p>
         <ul class="flex flex-col items-start justify-center gap-3">
-            <li class="font-bold text-[#CDC6F6] flex"><img class ="mr-2" src="/javascript.svg" width="20" height="20" alt="javascript" />Javascript</li>
-            <li class="font-bold text-color flex"><img class ="mr-2" src="/typescript.svg" width="20" height="20" alt="typescript" />Typescript</li>
-            <li class="font-bold text-color flex"><img class ="mr-2" src="/dart.svg" width="20" height="20" alt="dart" />Dart</li>
-            <li class="font-bold text-[#CDC6F6] flex"><img class ="mr-2" src="/java-4.svg" width="20" height="20" alt="java" />Java</li>
-
+            {
+                links.map((link, index) => (
+                <li class="font-bold text-[#CDC6F6] flex"><img class ="mr-2" src={link.imagePath} width="20" height="20" alt={link.name} />{link.name}</li>
+                ))
+            }
             </ul>
-    </div>
-    :
-    (title === "Frontend") 
-    ?
-    <div class="animate-fade-up animate-duration-[2800ms]">
-        <p class="text-[#CDC6F6] text-xl font-bold pb-5">{title}</p>
-        <ul class="flex flex-col items-start gap-3">
-            <li class="font-semibold text-[#CDC6F6] flex"><img class ="mr-2"  src="/react-2.svg" width="20" height="20" alt="react" />React</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/flutter.svg" width="20" height="20" alt="flutter" />Flutter</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/astro.svg" width="20" height="20" alt="astro" />Astro</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/next-js.svg" width="20" height="20" alt="next" />Next</li>
-        </ul>
-    </div>
-    :
-    (title === "Backend")
-    ?
-    <div class="animate-fade-up animate-duration-[3400ms]">
-        <p class="text-[#CDC6F6] text-xl font-bold pb-5">{title}</p>
-        <ul class="flex flex-col items-start gap-3">
-            <li class="font-semibold text-[#CDC6F6] flex"><img class ="mr-2"  src="/express-109.svg" width="20" height="20" alt="express" />Express</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/spring-3.svg" width="20" height="20" alt="spring" />Spring boot</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/postgresql.svg" width="20" height="20" alt="postgresql" />Postgresql</li>
-            <li class="font-semibold text-[#CDC6F6] flex"><img class ="mr-2"  src="/mongodb.svg" width="20" height="20" alt="mongo" />Mongo Db</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/redis.svg" width="20" height="20" alt="redis" />Redis</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/trpc.svg" width="20" height="20" alt="redis" />tRPC</li>
-            </ul>
-    </div>
-    :
-    <div class="animate-fade-up animate-duration-[4000ms]">
-        <p class="text-[#CDC6F6] text-xl font-bold pb-5">{title}</p>
-        <ul class="flex flex-col items-start gap-3">
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/figma.svg" width="20" height="20" alt="figma" />Figma</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/tailwind.svg" width="20" height="20" alt="tailwind" />Tailwind css</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/favicon.ico" width="25" height="20" alt="vercel" />Vercel</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/prisma-3.svg" width="20" height="20" alt="prisma" />Prisma</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/docker-3.svg" width="20" height="25" alt="docker" />Docker</li>
-            <li class="font-semibold text-color flex"><img class ="mr-2"  src="/turborepo-seeklogo.com.svg" width="20" height="25" alt="turborepo" />Turborepo</li>
-            </ul>
-    </div>
-    }
-    
 </div>
